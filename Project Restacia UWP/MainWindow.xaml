@@ -1,0 +1,38 @@
+<Window
+    x:Class="Project_Restacia_UWP.MainWindow"
+    xmlns:local="using:Project_Restacia_UWP"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt"/>
+    </Window.SystemBackdrop>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="AppTitleBar" Height="48" Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="90"/>
+                <ColumnDefinition x:Name="TitleColumn" Width="*"/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" >
+                <Image Source="ms-appx:///Assets/StoreLogo.scale-100.png" Width="28"/>
+                <TextBlock x:Name="TitleTextBlock" 
+                   Text="Restacia AI" 
+                   Style="{StaticResource CaptionTextBlockStyle}"
+                   VerticalAlignment="Center"
+                   Margin="4,0,0,0"/>
+            </StackPanel>
+        </Grid>
+        <!-- Your pages will be loaded in this Frame -->
+        <Frame Grid.Row="1" Grid.ColumnSpan="2" Height="Auto" x:Name="PageFrame" Margin="0,0,8,8" CornerRadius="8,8,8,8" />
+
+    </Grid>
+
+</Window>

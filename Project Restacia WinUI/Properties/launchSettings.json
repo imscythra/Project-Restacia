@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Project_Restacia_UWP (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Project_Restacia_UWP (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

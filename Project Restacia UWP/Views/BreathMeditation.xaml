@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Project_Restacia_UWP.Views.BreathMeditation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Project_Restacia_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:wuc="using:WinUICommunity"
+    mc:Ignorable="d">
+
+    <Grid>
+        <wuc:OpacityMaskView HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Margin="0,20"
+                            Padding="0" Opacity="0.3">
+            <wuc:OpacityMaskView.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" MappingMode="RelativeToBoundingBox">
+                    
+                    <GradientStop Offset="0.05" Color="#00FFFFFF" />
+                    <GradientStop Offset="0.25" Color="#FFFFFFFF" />
+                    <GradientStop Offset="0.55" Color="#FFFFFFFF" />
+                    <GradientStop Offset="0.95" Color="#00FFFFFF" />
+                </LinearGradientBrush>
+            </wuc:OpacityMaskView.OpacityMask>
+            <Image Source="ms-appx:///Assets/breathbg.png" Stretch="UniformToFill"/>
+        </wuc:OpacityMaskView>
+        <Grid MaxWidth="900" Margin="24">
+        
+        <ProgressBar x:Name="progressBar" VerticalAlignment="Top" Margin="0,20" Background="{ThemeResource AccentAcrylicBackgroundFillColorBaseBrush}"/>
+        <controls:SwitchPresenter x:Name="breathIndicator" Value="Idle" VerticalAlignment="Center">
+            <controls:SwitchPresenter.OpacityTransition>
+                <ScalarTransition/>
+            </controls:SwitchPresenter.OpacityTransition>
+            <controls:Case Value="Idle">
+                <StackPanel>
+                    <Viewbox Width="120" Height="120">
+                        <wuc:LoadingIndicator Mode="Pulse" Foreground="{ThemeResource SystemFillColorAttentionBrush}"/>
+                    </Viewbox>
+                    <TextBlock x:Name="menuTitle" Style="{ThemeResource SubheaderTextBlockStyle}" Text="Ready to go?" TextAlignment="Center"/>
+                    <TextBlock Opacity="0.7" TextWrapping="Wrap" TextAlignment="Center" Margin="0,12">Guided breathing meditation. 1 minute, 5 cycles.</TextBlock>
+                    <Button x:Name="startButton" Click="startButton_Click" Style="{ThemeResource AccentButtonStyle}" Content="Start" FontWeight="SemiBold" Padding="24,12" FontSize="18" CornerRadius="8"
+                            HorizontalAlignment="Center" Margin="0,24,0,0"/>
+                </StackPanel>
+            </controls:Case>
+            <controls:Case Value="Inhale">
+                <StackPanel>
+                    <Viewbox Width="120" Height="120">
+                        <wuc:LoadingIndicator Mode="Pulse" Foreground="{ThemeResource SystemFillColorAttentionBrush}"/>
+                    </Viewbox>
+                    <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}" Margin="0,12,0,0" Text="Inhale." TextAlignment="Center"/>
+                    <TextBlock Opacity="0.7" Text="Breath in, relax. Free your mind." TextAlignment="Center"/>
+                </StackPanel>
+            </controls:Case>
+            <controls:Case Value="Hold">
+                <StackPanel>
+                    <Viewbox Width="100" Height="100">
+                        <wuc:LoadingIndicator Mode="Pulse" Foreground="{ThemeResource SystemFillColorCautionBrush}"/>
+                    </Viewbox>
+                    <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}" Margin="0,12,0,0" Text="Hold." TextAlignment="Center"/>
+                    <TextBlock Opacity="0.7" Text="Empty your mind. Leave your thoughts alone." TextAlignment="Center"/>
+                </StackPanel>
+            </controls:Case>
+            <controls:Case Value="Exhale">
+                <StackPanel>
+                    <Viewbox Width="120" Height="120">
+                        <wuc:LoadingIndicator Mode="Pulse" Foreground="{ThemeResource SystemFillColorSuccessBrush}"/>
+                    </Viewbox>
+                    <TextBlock Style="{ThemeResource SubheaderTextBlockStyle}" Margin="0,12,0,0" Text="Exhale." TextAlignment="Center"/>
+                    <TextBlock Opacity="0.7" Text="Let it go. Calm down. Chill." TextAlignment="Center"/>
+                </StackPanel>
+            </controls:Case>
+        </controls:SwitchPresenter>
+        <Button Padding="12" CornerRadius="278" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button.Flyout>
+                <Flyout ShouldConstrainToRootBounds="False">
+                    <StackPanel>
+                        <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}">About this platform</TextBlock>
+                        <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" FontStyle="Italic" Margin="0,0,0,12">Restacia.UI.BreathAutomhate v0.1</TextBlock>
+                        <TextBlock>
+                            Made with ❤️ by <Hyperlink NavigateUri="https://open.spotify.com/artist/0hP6IlwUpSSRaIpKdiPHrD">Scythra</Hyperlink>. 
+                            <LineBreak/>Check out his <Hyperlink NavigateUri="https://github.com/imscythra">GitHub</Hyperlink>
+                            for more cool stuffs.
+                        </TextBlock> 
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+            <FontIcon Glyph="&#xE946;"/>
+        </Button>
+    </Grid>
+    </Grid>
+</Page>
