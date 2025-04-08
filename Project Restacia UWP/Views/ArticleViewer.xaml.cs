@@ -32,30 +32,30 @@ namespace Project_Restacia_UWP.Views
         public ArticleViewer()
         {
             this.InitializeComponent();
-            articleloader();
+            //articleloader();
         }
         
-        private async void articleloader()
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
+        //private async void articleloader()
+        //{
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        try
+        //        {
 
-                    // Read the stream as a string.
-                    // Fetch the content from the URL
-                    string content = await client.GetStringAsync("https://raw.githubusercontent.com/imscythra/restacia-articlesdb/main/article_spotify.md");
-                    // Set the TextBlock's text
-                    articleMDarea.Text = content;
+        //            // Read the stream as a string.
+        //            // Fetch the content from the URL
+        //            string content = await client.GetStringAsync("https://raw.githubusercontent.com/imscythra/restacia-articlesdb/main/article_spotify.md");
+        //            // Set the TextBlock's text
+        //            articleMDarea.Text = content;
 
 
-                }
-                catch (IOException e)
-                {
-                    articleMDarea.Text = ("The file could not be read: ");
-                    articleMDarea.Text += (e.Message);
-                }
-            }
-        }
+        //        }
+        //        catch (IOException e)
+        //        {
+        //            articleMDarea.Text = ("The file could not be read: ");
+        //            articleMDarea.Text += (e.Message);
+        //        }
+        //    }
+        //}
     }
 }

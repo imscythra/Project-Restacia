@@ -31,7 +31,7 @@ namespace Project_Restacia_UWP
             hostFrame.Navigate(typeof(HomePage));
             sidebar_navview.SelectedItem = 0;
             // NavigationView logic
-            sidebar_navview.ItemInvoked +=  (_, e) =>
+            sidebar_navview.ItemInvoked +=  async (_, e) =>
             {
                 if (!e.IsSettingsInvoked)
                     switch ((e.InvokedItemContainer as Microsoft.UI.Xaml.Controls.NavigationViewItem).Tag.ToString())
@@ -43,11 +43,8 @@ namespace Project_Restacia_UWP
                             hostFrame.Navigate(typeof(ExplorePage), null);
                             break;
                         case "chatbot":
-                            
-                            // TODO: Replace the typeof target with which page to debug
-                            hostFrame.Navigate(typeof(ChatbotView), null);
-                            
-                            break;
+                            chatbotHelper();
+                                break;
                         case "about":
                           
                             break;
@@ -62,6 +59,22 @@ namespace Project_Restacia_UWP
                             break;
                     }
             };
+            
+        }
+
+        
+            
+
+        private void chatbotHelper()
+        {
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            if (localSettings.Values["apiKey"] != null) { hostFrame.Navigate(typeof(ChatbotView), null); }
+            else
+            {
+                apikeydialog dg = new apikeydialog();
+                dg.XamlRoot = this.XamlRoot;
+                dg.ShowAsync();
+            }
         }
 
         private void qotddebug()

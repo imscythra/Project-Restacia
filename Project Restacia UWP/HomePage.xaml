@@ -34,8 +34,8 @@
                 </Grid>
             </wuc:OpacityMaskView>
             <StackPanel Margin="48,82,48,0">
-                <TextBlock Text="Restacia AI"  Style="{ThemeResource TitleLargeTextBlockStyle}"/>
-                <TextBlock Text="Serving your mental the luxury it deserves." FontStyle="Italic" FontWeight="SemiLight"
+                <TextBlock Text="Restacia AI" Foreground="#ffffff"  Style="{ThemeResource TitleLargeTextBlockStyle}"/>
+                <TextBlock Text="Serving your mental the luxury it deserves." Foreground="#ffffff" FontStyle="Italic" FontWeight="SemiLight"
                            Margin="0,2" Style="{ThemeResource SubtitleTextBlockStyle}" Opacity="0.7"/>
             </StackPanel>
 

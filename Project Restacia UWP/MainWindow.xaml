@@ -31,7 +31,7 @@
             </StackPanel>
         </Grid>
         <!-- Your pages will be loaded in this Frame -->
-        <Frame Grid.Row="1" Grid.ColumnSpan="2" Height="Auto" x:Name="PageFrame" Margin="0,0,8,8" CornerRadius="8,8,8,8" />
+        <Frame Grid.Row="1" Grid.ColumnSpan="2" Height="Auto" x:Name="PageFrame" Margin="0,0,8,8" CornerRadius="8,8,8,8" Loaded="PageFrame_Loaded"/>
 
     </Grid>
 

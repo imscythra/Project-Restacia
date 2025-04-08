@@ -91,6 +91,7 @@
     <None Remove="Assets\joystick_3d.png" />
     <None Remove="Assets\memo_3d.png" />
     <None Remove="Assets\office_worker_3d_light.png" />
+    <None Remove="Assets\welcomebanner.png" />
     <None Remove="Media\article1.png" />
     <None Remove="Media\article2.png" />
     <None Remove="Media\article3.png" />
@@ -98,6 +99,7 @@
     <None Remove="Media\clockwork_reason.mp3" />
     <None Remove="Media\homebanner.jpg" />
     <None Remove="Media\Spotify_logo.png" />
+    <None Remove="Views\apikeydialog.xaml" />
     <None Remove="Views\ArticleViewer.xaml" />
     <None Remove="Views\BreathMeditation.xaml" />
     <None Remove="Views\BrowserPage.xaml" />
@@ -107,6 +109,7 @@
     <None Remove="Views\QuoteOfTheDayDialog.xaml" />
     <None Remove="Views\SpotifyAuthDialog.xaml" />
     <None Remove="Views\SpotifyView.xaml" />
+    <None Remove="Views\WelcomeDialog.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Page Remove="Styles\CrimsonUIStyles.xaml" />
@@ -144,7 +147,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Labs.WinUI.Controls.MarkdownTextBlock" Version="1.0.0" />
     <PackageReference Include="CommunityToolkit.Uwp.Controls.Primitives" Version="8.1.240821" />
     <PackageReference Include="CommunityToolkit.WinUI.Behaviors" Version="8.1.240821" />
     <PackageReference Include="CommunityToolkit.WinUI.Controls.LayoutTransformControl" Version="8.1.240821" />
@@ -209,6 +211,9 @@
     <Content Update="Assets\office_worker_3d_light.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="Assets\welcomebanner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
@@ -220,6 +225,12 @@
     <None Update="Styles\CrimsonUIStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Update="Views\apikeydialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\WelcomeDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\BrowserPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

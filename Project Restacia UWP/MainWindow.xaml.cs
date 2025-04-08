@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Project_Restacia_UWP.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -63,15 +64,8 @@ namespace Project_Restacia_UWP
                 m_TitleBar.ButtonBackgroundColor = Colors.Transparent;
                 m_TitleBar.ButtonHoverBackgroundColor = Colors.Black;
             }
-            else
-            {
-                // Title bar customization using these APIs is currently
-                // supported only on Windows 11. In other cases, hide
-                // the custom title bar element.
-                // AppTitleBar.Visibility = Visibility.Collapsed;
-                // TODO Show alternative UI for any functionality in
-                // the title bar, such as the back button, if used
-            }
+
+            
 
             // background music
             //MediaPlayer mPlayer = new MediaPlayer();
@@ -79,6 +73,30 @@ namespace Project_Restacia_UWP
             //mPlayer.Source = MediaSource.CreateFromUri(new System.Uri("ms-appx:///Media/clockwork_reason.mp3"));
             //mPlayer.IsLoopingEnabled = true;
             //mPlayer.Play();
+        }
+
+        private async void WelcomeDialogHelper()
+        {
+            // show welcome dialog
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            object wDismissed = localSettings.Values["welcomeDismissed"];
+            if (wDismissed != null)
+            {
+                WelcomeDialog wd = new WelcomeDialog()
+                {
+                    XamlRoot = PageFrame.XamlRoot
+                };
+                await wd.ShowAsync();
+            }
+            else
+            {
+                WelcomeDialog wd = new WelcomeDialog()
+                {
+                    XamlRoot = PageFrame.XamlRoot
+                };
+                await wd.ShowAsync();
+
+            }
         }
 
 
@@ -169,6 +187,11 @@ namespace Project_Restacia_UWP
 
             uint scaleFactorPercent = (uint)(((long)dpiX * 100 + (96 >> 1)) / 96);
             return scaleFactorPercent / 100.0;
+        }
+
+        private void PageFrame_Loaded(object sender, RoutedEventArgs e)
+        {
+            WelcomeDialogHelper();
         }
     }
 }

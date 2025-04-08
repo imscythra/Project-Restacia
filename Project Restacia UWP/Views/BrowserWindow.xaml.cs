@@ -67,7 +67,7 @@ namespace Project_Restacia_UWP.Views
             this.SetIsMaximizable(true);
             this.SetIsMinimizable(true);
 
-            wv2DataLoader();
+            
 
         }
 
@@ -125,6 +125,11 @@ namespace Project_Restacia_UWP.Views
         private void refreshButton_Click(object sender, RoutedEventArgs e)
         {
             wv2.Reload();
+        }
+
+        private void wv2_Loaded(object sender, RoutedEventArgs e)
+        {
+            wv2DataLoader();
         }
     }
 }

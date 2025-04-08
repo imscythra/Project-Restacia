@@ -58,7 +58,7 @@
         </Grid>
         <Grid Margin="4" BorderBrush="{ThemeResource AccentAcrylicInAppFillColorBaseBrush}" BorderThickness="1" Grid.Row="2"
               CornerRadius="8" Padding="2">
-            <WebView2 x:Name="wv2" Source="https://google.com" NavigationStarting="wv2_NavigationStarting" NavigationCompleted="wv2_NavigationCompleted"/>
+            <WebView2 x:Name="wv2" Loaded="wv2_Loaded" Source="https://google.com" NavigationStarting="wv2_NavigationStarting" NavigationCompleted="wv2_NavigationCompleted"/>
         </Grid>
     </Grid>
 </Window>

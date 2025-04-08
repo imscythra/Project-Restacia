@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentDialog
+    x:Class="Project_Restacia_UWP.Views.apikeydialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Project_Restacia_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" CornerRadius="8" Padding="0"
+    Background="{ThemeResource SolidBackgroundFillColorBaseAltBrush}">
+
+    <Grid Width="400">
+        <StackPanel Spacing="8">
+            <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="You'll need an OpenAI API key for that."/>
+            <TextBlock TextWrapping="Wrap" Text="Restacia’s AI is powered by fine-tuned models based on OpenAI, delivering personalized traits and insights to support you as your virtual psychological companion."/>
+            <Grid Margin="0,12,0,0">
+                <PasswordBox x:Name="APIKeyBox" IsPasswordRevealButtonEnabled="False" Margin="0,0,8,0" BorderBrush="Transparent" VerticalAlignment="Stretch" PlaceholderText="API key"/>
+            </Grid>
+            <CheckBox x:Name="APIKeyBox_Toggle" Click="APIKeyBox_Toggle_Click" Content="Show API key"/>
+            <TextBlock TextWrapping="Wrap" Text="You can get an API key from the OpenAI Platform website." Margin="0,0,0,8"/>
+            <Button x:Name="Getkey" Click="Getkey_Click" Content="Get API key" HorizontalAlignment="Stretch"/>
+            <Button x:Name="closeButton" Click="closeButton_Click" Style="{ThemeResource AccentButtonStyle}" Content="Save and close" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>

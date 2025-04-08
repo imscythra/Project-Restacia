@@ -29,7 +29,7 @@
                             <ImageBrush ImageSource="https://i.pinimg.com/originals/be/f4/84/bef484c1c2679790df69058bcd570d53.jpg"
                                     Stretch="UniformToFill" />
                         </Grid.Background>
-                        <Rectangle Fill="Black" Opacity="0.3" Margin="-32,0"/>
+                        <Rectangle Fill="{ThemeResource TextOnAccentFillColorPrimaryBrush}" Opacity="0.3" Margin="-32,0"/>
                         <StackPanel VerticalAlignment="Center" Margin="0,0,150,0">
                             <TextBlock Style="{ThemeResource TitleTextBlockStyle}">Announcing Developer Preview for Restacia</TextBlock>
                             <TextBlock Text="Here's a fresh insider preview from the developer, see what's new" FontWeight="SemiBold"
@@ -53,7 +53,7 @@
                             <ImageBrush ImageSource="https://i.redd.it/f0mpjw4ddzv41.png"
                     Stretch="UniformToFill"/>
                         </Grid.Background>
-                        <Rectangle Fill="Black" Opacity="0.3" Margin="-32,0"/>
+                        <Rectangle Fill="{ThemeResource TextOnAccentFillColorPrimaryBrush}" Opacity="0.3" Margin="-32,0"/>
                         <StackPanel VerticalAlignment="Center" Margin="0,0,150,0">
                             <TextBlock Style="{ThemeResource TitleTextBlockStyle}">Listen to our collections</TextBlock>
                             <TextBlock Text="Tons of inspiring, healing and motivational music to accompany" FontWeight="SemiBold"

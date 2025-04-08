@@ -15,11 +15,10 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!--title bar code-->
-        <StackPanel Grid.RowSpan="2" VerticalAlignment="Center">
-            <Button x:Name="backbtn" Click="backbtn_Click" HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent">
+        <StackPanel Grid.RowSpan="2" VerticalAlignment="Top">
+            <Button x:Name="backbtn" Click="backbtn_Click" HorizontalAlignment="Stretch" Margin="16,0" Background="Transparent" BorderBrush="Transparent">
                 <FontIcon Glyph="&#xE72B;" Height="40"/>
             </Button>
-            <wuc:Divider Margin="0"/>
             <NavigationView x:Name="sidebar_navview" PaneDisplayMode="Left" IsPaneToggleButtonVisible="False"
                         VerticalAlignment="Center" IsSettingsVisible="False" Width="88" IsBackButtonVisible="Collapsed" Margin="2,0,0,0" Loaded="sidebar_navview_Loaded">
             
@@ -34,7 +33,6 @@
 
                 <NavigationViewItem Height="80" Padding="0,0" Tag="explore" CornerRadius="6">
                     <Grid HorizontalAlignment="Stretch">
-                        <InfoBadge Margin="-6" Value="5" VerticalAlignment="Top" HorizontalAlignment="Right"/>
                         <StackPanel HorizontalAlignment="Center" >
                             <FontIcon Glyph="&#xf4a5;" FontSize="20" HorizontalAlignment="Center"/>
                             <TextBlock Text="Explore" Style="{ThemeResource CaptionTextBlockStyle}"
@@ -44,7 +42,6 @@
                 </NavigationViewItem>
                 <NavigationViewItem Height="80" Padding="0,0" Tag="chatbot" CornerRadius="6">
                     <Grid HorizontalAlignment="Stretch">
-                        <InfoBadge Margin="-6" Value="5" VerticalAlignment="Top" HorizontalAlignment="Right"/>
                         <StackPanel HorizontalAlignment="Center" >
                             <FontIcon Glyph="&#xF1AD;" FontSize="20" HorizontalAlignment="Center"/>
                             <TextBlock Text="Restacia AI" Style="{ThemeResource CaptionTextBlockStyle}"
@@ -54,7 +51,7 @@
                 </NavigationViewItem>
                 <NavigationViewItem Height="80" Padding="0,0" Tag="you" CornerRadius="6">
                     <StackPanel HorizontalAlignment="Center" >
-                        <PersonPicture Initials="SJ" Width="40"/>
+                        <PersonPicture Width="40"/>
                         <TextBlock Text="You" Style="{ThemeResource CaptionTextBlockStyle}"
    TextAlignment="Center" Margin="0,8,0,0"/>
                     </StackPanel>

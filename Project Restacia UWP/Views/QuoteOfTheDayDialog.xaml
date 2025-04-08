@@ -12,10 +12,10 @@
     </ContentDialog.Background>
     <StackPanel Width="400" Spacing="12">
         <StackPanel Spacing="24">
-            <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="Quote of the Day" Opacity="0.7"/>
-            <TextBlock x:Name="qotdText" FontStyle="Italic" FontWeight="SemiLight" FontSize="26"
+            <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Foreground="#ffffff" Text="Quote of the Day" Opacity="0.7"/>
+            <TextBlock x:Name="qotdText" Foreground="#ffffff" FontStyle="Italic" FontWeight="SemiLight" FontSize="26"
                        Text="Hello world, what the hell are you doing?" TextWrapping="Wrap"/>
-            <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}"
+            <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}" Foreground="#ffffff"
                        Text="with ♥ by Restacia team" FontStyle="Italic"/>
         </StackPanel>
         

@@ -82,7 +82,14 @@ namespace Project_Restacia_UWP
 
         private void featured_Chat_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ChatbotView));
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            if (localSettings.Values["apiKey"] != null) { this.Frame.Navigate(typeof(ChatbotView), null); }
+            else
+            {
+                apikeydialog dg = new apikeydialog();
+                dg.XamlRoot = this.XamlRoot;
+                dg.ShowAsync();
+            }
         }
 
         private void exploreMore_Click(object sender, RoutedEventArgs e)
