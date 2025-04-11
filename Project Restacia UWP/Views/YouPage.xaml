@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Project_Restacia_UWP.Views.YouPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Project_Restacia_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Grid Margin="12" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" CornerRadius="8" VerticalAlignment="Top" Padding="24,36">
+            <StackPanel Spacing="16" Orientation="Horizontal">
+                <PersonPicture/>
+                <StackPanel Spacing="0" VerticalAlignment="Center">
+                    <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Text="Restacia user"/>
+                    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Opacity="0.7" Text="test@restacia.app"/>
+                    <DropDownButton Content="Account details" Margin="0,8,0,0" Background="Transparent" BorderThickness="2">
+                        <DropDownButton.Flyout>
+                            <Flyout Placement="BottomEdgeAlignedLeft">
+                                <TextBlock MaxWidth="300" TextWrapping="Wrap" Style="{ThemeResource BaseTextBlockStyle}">There's nothing to see here. This is a demonstrational profile and doesn't resemble any actual real-life information.</TextBlock>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" MaxWidth="350"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="48,202,24,0">
+                <Image Source="/Assets/Square44x44Logo.altform-unplated_targetsize-256.png" Width="100" HorizontalAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" Style="{ThemeResource TitleTextBlockStyle}" Text="Restacia"/>
+                <TextBlock TextWrapping="Wrap" FontWeight="SemiLight" FontSize="18" Opacity="0.7" Text="Your virtual mental health companion."/>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Opacity="0.7" Text="Prototype version, April 2025 (version 0.1.0)"/>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Opacity="0.7" Text="Made with ❤️ in Malaysia. Credits to Sarah, Ain and Izzah"/>
+        </StackPanel>
+            <Border BorderThickness="0,0,1,0" Margin="0,202,0,12" BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}"/>
+            <ScrollViewer Grid.Column="1" Margin="12,178,12,0" CornerRadius="8" Padding="24,12,24,0">
+            <StackPanel Spacing="0" MaxWidth="600" HorizontalAlignment="Center" Margin="0,0,0,24">
+                    <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="About me" Margin="0,12"/>
+                    <PersonPicture ProfilePicture="https://avatars.githubusercontent.com/imscythra" HorizontalAlignment="Left" Width="120"/>
+                <TextBlock Margin="0,12,0,4" Style="{ThemeResource TitleTextBlockStyle}" Text="Hi, I'm Scythra!"/>
+                <TextBlock TextWrapping="Wrap" LineHeight="20">
+                    He/Him, 18, Malaysia, developer and bass music producer. <LineBreak/><LineBreak/>Has been learning to develop Windows apps using UWP and WASDK framework since the age of 14, and still exploring
+                    into the realm of software development. Has deep passionate into programming, UI/UX design, AI and pretty much every IT-related stuffs.            
+                </TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0,12">
+                    <HyperlinkButton Content="Developer Sanctuary Discord" NavigateUri="https://discord.gg/8zfSq5qNMb"/>
+                    <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/imscythra"/>
+                    <HyperlinkButton Content="Spotify" NavigateUri="https://open.spotify.com/artist/0hP6IlwUpSSRaIpKdiPHrD"/>
+                    <HyperlinkButton Content="YouTube" NavigateUri="https://youtube.com/@imscythra"/>
+                        <HyperlinkButton Content="More" NavigateUri="https://bit.ly/m/imscythra"/>
+                </StackPanel>
+                <Grid Padding="12" CornerRadius="8" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Assets/heart_with_ribbon_3d.png" Width="80"/>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="4" Margin="12,0,0,0">
+                            <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="Love what I’m working on?"/>
+                            <TextBlock TextWrapping="Wrap">
+                                As a student, I’m building this with heart (and lots of late nights). If you’d like to keep the momentum going, your support means the world! 💖
+                            </TextBlock>
+                            <Button Click="donateButton_Click" x:Name="donateButton" Margin="0,12,0,8" Style="{ThemeResource AccentButtonStyle}" Content="Buy me a Ko-Fi"/>
+                            
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

@@ -53,7 +53,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBox x:Name="MessageTextBox" PlaceholderText="Send a message" HorizontalAlignment="Stretch" Margin="0,0,12,0"
-                     AcceptsReturn="True" Padding="16,10" CornerRadius="8" BorderThickness="0" KeyUp="MessageTextBox_KeyUp" KeyDown="MessageTextBox_KeyDown"
+                     AcceptsReturn="False" Padding="16,10" CornerRadius="8" BorderThickness="0" KeyDown="MessageTextBox_KeyDown"
                      TextWrapping="Wrap"/>
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
                 <Button x:Name="sendButton" Click="sendButton_Click" Style="{ThemeResource AccentButtonStyle}" IsEnabled="False">
@@ -67,5 +67,19 @@
                 </Button>
             </StackPanel>
         </Grid>
+        <StackPanel Orientation="Horizontal" Spacing="8"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="12">
+            <DropDownButton Content="Change model">
+                <DropDownButton.Flyout>
+                    <MenuFlyout Placement="BottomEdgeAlignedRight">
+                        <MenuFlyout.Items>
+                            <MenuFlyoutItem x:Name="gpt4o" Text="gpt-4o" Click="gpt4o_Click"/>
+                            <MenuFlyoutItem x:Name="gpt4omini" Text="gpt-4o mini" Click="gpt4omini_Click"/>
+                        </MenuFlyout.Items>
+                    </MenuFlyout>
+                </DropDownButton.Flyout>
+                
+            </DropDownButton>
+            <Button x:Name="apikeybtn" Click="apikeybtn_Click" Content="Change API key"/>
+        </StackPanel>
     </Grid>
 </Page>

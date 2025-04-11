@@ -21,7 +21,7 @@
                      relaxing Spotify tracks, helpful guides and a friendly AI-powered psychological partner.
                 </TextBlock>
                 <InfoBar Title="Disclaimer" Margin="0,12,0,0" Severity="Informational"
-                         Message="This app is a functional prototype of the Restacia project, and it's not an actual product. The purpose of this app is solely for showcasing and demonstrating only."
+                         Message="This app is a functional prototype of the Restacia project, and it's not completed. Should there be some rough edges and bugs, kindly report it from the profile page."
                          IsOpen="True" IsIconVisible="False" IsClosable="False"/>
                 
             </StackPanel>

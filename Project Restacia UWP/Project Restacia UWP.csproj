@@ -11,7 +11,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
     <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
-    <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+    <PublishProfile>win-$(Platform).pubxml</PublishProfile>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
@@ -19,11 +19,12 @@
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <GenerateTestArtifacts>False</GenerateTestArtifacts>
     <AppxBundle>Never</AppxBundle>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm64</AppxBundlePlatforms>
     <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
     <PackageCertificateKeyFile>Project Restacia UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
     <UserSecretsId>83b0da9e-f579-4b7f-85d4-80b81862deec</UserSecretsId>
+    <AppxPackageDir>C:\Users\Scythra\desktop\restacia</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <OutputPath>bin\x86\Debug\</OutputPath>
@@ -110,6 +111,7 @@
     <None Remove="Views\SpotifyAuthDialog.xaml" />
     <None Remove="Views\SpotifyView.xaml" />
     <None Remove="Views\WelcomeDialog.xaml" />
+    <None Remove="Views\YouPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Page Remove="Styles\CrimsonUIStyles.xaml" />
@@ -157,7 +159,7 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240802000" />
     <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.8" />
-    <PackageReference Include="OpenAI-DotNet" Version="8.2.2" />
+    <PackageReference Include="OpenAI-DotNet" Version="8.6.3" />
     <PackageReference Include="System.Formats.Asn1" Version="8.0.1" />
     <PackageReference Include="WinUICommunity.Components" Version="6.9.0" />
     <PackageReference Include="WinUIEx" Version="2.3.4" />
@@ -225,6 +227,9 @@
     <None Update="Styles\CrimsonUIStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Update="Views\YouPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\apikeydialog.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

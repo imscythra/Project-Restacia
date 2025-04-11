@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
 		 xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp uap3">
-  <Identity Name="30868ItzBluebxrry.RestaciaDeveloperpreview" Publisher="CN=Scythra" Version="0.0.1.0" />
+  <Identity Name="30868ItzBluebxrry.RestaciaDeveloperpreview" Publisher="CN=EAB9B2B6-6338-4C0C-A002-D1666231438D" Version="0.1.0.0" />
 	
   <Properties>
     <DisplayName>Restacia (Developer preview)</DisplayName>
-    <PublisherDisplayName>ItzBlluebxrry</PublisherDisplayName>
+    <PublisherDisplayName>ItzBluebxrry</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>

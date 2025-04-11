@@ -82,11 +82,7 @@ namespace Project_Restacia_UWP
             object wDismissed = localSettings.Values["welcomeDismissed"];
             if (wDismissed != null)
             {
-                WelcomeDialog wd = new WelcomeDialog()
-                {
-                    XamlRoot = PageFrame.XamlRoot
-                };
-                await wd.ShowAsync();
+                
             }
             else
             {

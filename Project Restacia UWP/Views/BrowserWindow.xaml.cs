@@ -109,7 +109,7 @@ namespace Project_Restacia_UWP.Views
 
         private void navHandler()
         {
-            if (wv2.CanGoBack) { wv2.GoBack(); } else { backButton.IsEnabled = false; }
+            if (wv2.CanGoBack) { /*wv2.GoBack();*/ } else { backButton.IsEnabled = false; }
         }
         private void wv2_NavigationCompleted(WebView2 sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs args)
         {

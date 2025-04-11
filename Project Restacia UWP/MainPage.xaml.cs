@@ -45,8 +45,8 @@ namespace Project_Restacia_UWP
                         case "chatbot":
                             chatbotHelper();
                                 break;
-                        case "about":
-                          
+                        case "you":
+                            hostFrame.Navigate(typeof(YouPage), null);
                             break;
                         default: //Means else 
                             ContentDialog dg = new ContentDialog();
